@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://api.pdok.nl/cbs/gebiedsindelingen/ogc/v1/collections\")",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -s \"https://api.pdok.nl/cbs/gebiedsindelingen/ogc/v1/collections/provincie_gegeneraliseerd\")",
+      "Bash(python3 -m json.tool)",
+      "Bash(curl -s \"https://api.pdok.nl/cbs/gebiedsindelingen/ogc/v1/collections/provincie_gegeneraliseerd/items?f=json&limit=2\")",
+      "Bash(curl -s \"https://api.pdok.nl/cbs/gebiedsindelingen/ogc/v1/collections/provincie_gegeneraliseerd/items?f=json&limit=1&statnaam=Zeeland\")",
+      "Bash(curl -s \"https://api.pdok.nl/cbs/gebiedsindelingen/ogc/v1/collections/provincie_gegeneraliseerd/queryables\")",
+      "Bash(curl -s \"https://api.pdok.nl/cbs/gebiedsindelingen/ogc/v1/collections/provincie_gegeneraliseerd/items?f=json&limit=1000\" -o /tmp/prov.json)",
+      "Bash(curl -s \"https://api.pdok.nl/cbs/gebiedsindelingen/ogc/v1/collections/provincie_gegeneraliseerd/items?f=json\")",
+      "Bash(curl -s \"https://api.pdok.nl/cbs/gebiedsindelingen/ogc/v1/collections/provincie_gegeneraliseerd/items?f=json&limit=1000\")",
+      "Bash(python3 -c \"import geopandas\")",
+      "Bash(curl -s \"https://api.open-meteo.com/v1/forecast?latitude=53.2162&longitude=6.7458&hourly=wind_speed_10m,wind_gusts_10m,snowfall,precipitation,temperature_2m,visibility&forecast_days=2&timezone=UTC\")",
+      "Skill(claude-api)",
+      "Skill(claude-api:*)",
+      "Bash(ant auth *)",
+      "Bash(git add *)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(timeout 30 bash -c 'until curl -sf http://localhost:8501/_stcore/health >/dev/null; do sleep 1; done')",
+      "Read(//private/tmp/**)",
+      "Bash(curl -sf http://localhost:8501/_stcore/health)",
+      "Bash(curl -sf --max-time 3 http://localhost:8501/_stcore/health)",
+      "Bash(kill -9 59359)",
+      "Bash(pkill -9 -f \"streamlit run app.py\")",
+      "Bash(curl -sf --max-time 5 http://localhost:8501/_stcore/health)",
+      "Bash(pkill -f \"streamlit run app.py\")",
+      "Bash(env)"
+    ]
+  }
+}
